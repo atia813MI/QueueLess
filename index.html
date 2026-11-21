@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QueueLess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>QueueLess</h1>
+        <p>Hospital Queue Management System</p>
+    </header>
+
+    <main>
+
+        <main>
+
+    <section>
+        <h2>Patient Registration</h2>
+
+        <label>Patient Name:</label>
+        <input type="text" id="patientName" placeholder="Enter patient name">
+
+        <label>Department:</label>
+        <select id="department">
+            <option value="">Select Department</option>
+            <option>Cardiology</option>
+            <option>Medicine</option>
+            <option>Orthopedics</option>
+            <option>Neurology</option>
+        </select>
+
+        <button onclick="addPatient()">Add Patient to Queue</button>
+    </section>
+
+    <section>
+        <h2>Current Queue</h2>
+
+        <p>Total Patients Waiting: <span id="totalPatients">0</span></p>
+        <button onclick="callNextPatient()">Call Next Patient</button>
+
+        <table>
+            <thead>
+                <th>Action</th>
+                <tr>
+                    <th>Token</th>
+                    <th>Patient Name</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="queueTable">
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
